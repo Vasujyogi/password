@@ -1,0 +1,25 @@
+<html>
+    <title>Password generation</title>
+    <head>
+    <script>
+     function func(){
+    var output=document.getElementById("demo");
+     var password="";
+     var values="ABCDEFIGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789@#$%";
+     console.log(values.length)
+     console.log(Math.random()*values.length);
+     console.log(values.charAt(Math.random()*values.length));
+     for(i=1;i<9;i++){
+        var newChar=Math.random()*values.length;
+        password=password+values.charAt(newChar);
+     }
+     output.innerHTML=password
+     }
+    </script>
+    <body>
+     <h1> Welcome to Vasu password page</h1>
+     <p id="demo"></p>
+     <button onclick="func()">Submit</button>   
+    </body>
+    </head>
+</html>
